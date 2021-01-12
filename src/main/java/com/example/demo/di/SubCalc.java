@@ -1,8 +1,6 @@
 package com.example.demo.di;
 
-import org.springframework.stereotype.Component;
-
-@Component
+//@Component
 public class SubCalc implements Calculator{
 
 	@Override
