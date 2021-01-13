@@ -19,4 +19,13 @@ public class ItemRepositoryMapperTest {
 			System.out.println(i);
 		}
 	}
+	@Test
+	void testInsert() {
+		Item item = new Item();
+		item.setName("ボールペン");
+		item.setPrice(120);
+		item.setCategoryId(1);
+		repo.insert(item);
+		repo.findAll().forEach(System.out::println);
+	}
 }

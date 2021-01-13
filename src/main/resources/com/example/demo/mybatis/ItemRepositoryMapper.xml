@@ -10,4 +10,10 @@
 		from
 			item
 	</select>
+	<insert id="insert" parameterType="com.example.demo.mybatis.Item">
+		<selectKey keyProperty="id" resultType="int" order="BEFORE">
+			select nextval('item_seq')
+		</selectKey>
+		insert into item values(#{id},#{name},#{price},#{categoryId})
+	</insert>
 </mapper>
